@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -e '(.session_title // \"\") | length > 0' >/dev/null 2>&1 || echo '{\"hookSpecificOutput\":{\"hookEventName\":\"SessionStart\",\"sessionTitle\":\"AI Training\"}}'"
+          }
+        ]
+      }
+    ]
+  }
+}
